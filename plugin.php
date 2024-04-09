@@ -29,7 +29,7 @@ function enqueue_block_editor_assets() {
     if ( file_exists( $asset_file ) ) {
         $assets = include $asset_file;
         wp_enqueue_script(
-            'index-format',
+            'index',
             plugin_dir_url( __FILE__ ) . 'build/index.js',
             $assets['dependencies'],
             $assets['version'],
@@ -37,8 +37,8 @@ function enqueue_block_editor_assets() {
         );
 
         wp_enqueue_style(
-            'index-format-styles',
-            plugin_dir_url( __FILE__ ) . 'build/index.css',
+            'index-style',
+            plugin_dir_url( __FILE__ ) . 'build/index-style.css',
             array(),
             $assets['version']
         );
