@@ -38,7 +38,7 @@ function enqueue_block_editor_assets() {
 
         wp_enqueue_style(
             'index-style',
-            plugin_dir_url( __FILE__ ) . 'build/index-style.css',
+            plugin_dir_url( __FILE__ ) . 'build/style-index.css',
             array(),
             $assets['version']
         );
